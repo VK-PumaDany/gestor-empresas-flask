@@ -1,0 +1,72 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+ENV/
+
+# Variables de entorno
+.env
+.env.*
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos compilados
+*.so
+
+# Flask
+instance/
+.webassets-cache
+
+# Base de datos
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de pruebas
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Cache de herramientas
+.mypy_cache/
+.ruff_cache/
+
+# Build y distribución
+build/
+dist/
+*.egg-info/
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+
+# Archivos de configuración local
+config.local.py
+
+# Node.js (si usas frontend)
+node_modules/
+
+# Archivos estáticos generados
+static/uploads/
+static/dist/
+
+# Secrets
+secrets.json
