@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+
+{% block title %}
+{{data.title_tab}}
+{% endblock %}
+
+{% block body %}
+{% include 'nav/nav.html' %}
+<main class="px-[10%]">
+    <h1 class="title">{{ data.titulo_h1 }}</h1>
+
+</main>
+<footer class="px-[10%]"></footer>
+{% endblock %}

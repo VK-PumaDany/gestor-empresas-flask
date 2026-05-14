@@ -1,0 +1,14 @@
+
+<nav class=" p-4 flex  justify-between bg-slate-800">
+    <h1 class="text-3xl font-semibold flex-1">APP FLASK</h1>
+    {% if data.all_cursos > 0 %}
+    <ul class="flex justify-center gap-2 flex-1">
+        {% for curso in data.cursos %}
+        <li class="bg-slate-600 py-2 px-5 rounded-md hover:bg-slate-500 transition-all cursor-pointer">{{ curso }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <div></div>
+    {% endif %}
+</nav>
