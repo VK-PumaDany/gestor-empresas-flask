@@ -4,11 +4,6 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
-    return "<h1>Bienvenido</h1>"
-
-
-@app.route("/page")
 def page():
     cursos = ["HTML", "CSS", "Javascript", "Python", "MYSQL"]
     data = {
@@ -19,6 +14,9 @@ def page():
     }
     return render_template("index.html", data=data)
 
+@app.route("/welcome")
+def index():
+    return "<h1>Bienvenido</h1>"
 
 @app.route("/saludo/nombre/<name>")
 def saludo(name):
