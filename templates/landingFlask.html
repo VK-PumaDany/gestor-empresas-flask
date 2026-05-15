@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+
+{% block body %}
+
+<body class="bg-neutral-200 min-h-screen pt-10 pb-16">
+    <main class="flex flex-col gap-8 items-center max-w-250 mx-auto">
+        <div class="">
+            <img class="w-120" src="{{  url_for('static', filename='images/landing-flask/flask-logotipo.png') }}"
+                alt="flask-logotipo">
+        </div>
+        <div class="w-full grid md:grid-cols-2 gap-3 px-8">
+            <div class="bg-blue-200 p-4 border border-blue-500 rounded-md flex flex-col gap-3">
+                <h2 class="text-2xl">Instalación</h2>
+                <div class="font-mono flex flex-col gap-2">
+                    <div class="flex flex-col">
+                        <b>Tener instalado pyton en su version</b>
+                        <span class="pl-4">> Python 3.13.7 o superior</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <b>Instalar con pip</b>
+                        <span class="pl-4">> pip install virtualenv</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <b>Iniciamos el entorno virtual</b>
+                        <span class="pl-4">> python -m virtualenv -p python3 env</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <b>Ingresamos en el entorno virtual</b>
+                        <span class="pl-4">> .\env\Scripts\activate</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <b>Descargamos Flask</b>
+                        <span class="pl-4">> pip install flask</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <b>Iniciamos el server con</b>
+                        <span class="pl-4">> python .\app\app.py</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-purple-200 p-4 border border-purple-500 rounded-md flex flex-col gap-3">
+                <h2 class="text-2xl">Código | archivo en la raiz app.py</h2>
+                <div class="font-mono flex flex-col gap-2">
+                    <span>from flask import Flask, render_template</span>
+                    <span> app = Flask(__name__)</span>
+                    <span>@app.route("/")</span>
+                    <span>def index():</span>
+                    <span class="pl-4">return "Bienvenido"</span>
+                    <span>if __name__ == "__main__":</span>
+                    <span class="pl-4">app.run(debug=True, port=5000)</span>
+
+                </div>
+            </div>
+            <div class="p-4 border rounded-md  border-neutral-500 bg-neutral-100 md:col-span-2">
+                <h2 class="text-2xl">Para Iniciar:</h2>
+                <p class="font-mono">
+                    py .\app.py
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}

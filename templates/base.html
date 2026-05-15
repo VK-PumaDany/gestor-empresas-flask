@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ data.head.title_tab }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
 </head>
 
-<body class="bg-slate-900 text-slate-50">
-    
-    {% block body %}{% endblock %}
-</body>
+
+{% block body %}{% endblock %}
+
 
 </html>

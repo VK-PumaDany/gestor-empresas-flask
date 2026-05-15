@@ -7,16 +7,30 @@ app = Flask(__name__)
 def page():
     cursos = ["HTML", "CSS", "Javascript", "Python", "MYSQL"]
     data = {
-        "titulo_tab": "Mi primera Page con Flask",
+        "head": {
+            "title_tab": "Mi primera Page con Flask",
+        },
         "titulo_h1": "Bienvenid@!",
         "cursos": cursos,
         "all_cursos": len(cursos),
     }
     return render_template("index.html", data=data)
 
+
+@app.route("/landing-flask")
+def ladingFlask():
+    data = {
+        "head": {
+            "title_tab": "Flask",
+        }
+    }
+    return render_template("landingFlask.html", data=data)
+
+
 @app.route("/welcome")
 def index():
     return "<h1>Bienvenido</h1>"
+
 
 @app.route("/saludo/nombre/<name>")
 def saludo(name):

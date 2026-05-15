@@ -1,14 +1,13 @@
 {% extends './base.html' %}
 
-{% block title %}
-{{data.title_tab}}
-{% endblock %}
 
 {% block body %}
-{% include 'nav/nav.html' %}
-<main class="px-[10%]">
-    <h1 class="title">{{ data.titulo_h1 }}</h1>
+<body class="bg-slate-900 text-slate-50">
+    {% include 'nav/nav.html' %}
+    <main class="px-[10%]">
+        <h1 class="title">{{ data.titulo_h1 }}</h1>
 
-</main>
-<footer class="px-[10%]"></footer>
+    </main>
+    <footer class="px-[10%]"></footer>
+</body>
 {% endblock %}
