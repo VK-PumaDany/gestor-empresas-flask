@@ -26,6 +26,15 @@ def ladingFlask():
     }
     return render_template("landingFlask.html", data=data)
 
+@app.route("/calculator")
+def calculator():
+    data = {
+        "head": {
+            "title_tab": "Flask",
+        }
+    }
+    return render_template("calculator.html")
+
 
 @app.route("/welcome")
 def index():
