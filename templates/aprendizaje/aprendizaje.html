@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title_tab %}
+{{ data.head.title_tab }}
+{% endblock %}
+
+{% block body %}
+<body>
+    <h1 class="text-2xl mb-5">Nombre: {{ data.name }}</h1>
+    <h1 class="text-2xl">Edad: {{ data.age }}</h1>
+</body>
+{% endblock %}
